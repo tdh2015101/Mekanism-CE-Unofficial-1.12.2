@@ -37,7 +37,7 @@ public class TileEntityGasGenerator extends TileEntityGenerator implements IGasH
     private int currentRedstoneLevel;
 
     public TileEntityGasGenerator() {
-        super("gas", "GasGenerator", MekanismConfig.current().general.FROM_H2.val() * 1000, MekanismConfig.current().general.FROM_H2.val() * 4);
+        super("gas", "GasGenerator", MekanismConfig.current().general.FROM_H2.val() * 2000, MekanismConfig.current().general.FROM_H2.val() * 1);
         inventory = NonNullListSynchronized.withSize(2, ItemStack.EMPTY);
         fuelTank = new GasTank(MAX_GAS);
     }
