@@ -20,6 +20,10 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build -Pnet.minecraftforge.gradle.disableUpdateChecker=true
+    - name: Attest
+      uses: actions/attest-build-provenance@v3
+      with:
+        subject-path: 'build/libs'
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
